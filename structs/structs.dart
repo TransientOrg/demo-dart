@@ -68,6 +68,7 @@ void main() {
 
   final helloWorld =
       dylib.lookupFunction<HelloWorld, HelloWorld>('hello_world');
+  final helloWorld2 = dylib.lookupFunction<HelloWorld, HelloWorld>('hello_world');
   final message = helloWorld().toDartString();
   print(message);
 
