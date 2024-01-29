@@ -29,7 +29,6 @@ jobs:
         run: |
           # Install the CLI
           curl https://deepsource.io/cli | sh
-
           # Send the report to DeepSource
           ./bin/deepsource report --analyzer dart-analyze --analyzer-type community --value-file ./dart_analyze.sarif
         
