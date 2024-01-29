@@ -21,6 +21,10 @@ jobs:
         with:
           input: dart_analyze.txt
           output: dart_analyze.sarif
+      - name: Tailscale
+        uses: tailscale/github-action@v1
+        with:
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
       - name: Upload SARIF to DeepSource
         run: |
           # Install the CLI
